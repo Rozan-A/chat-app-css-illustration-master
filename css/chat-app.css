@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: Rubik;
+  background-color: hsl(0, 0%, 100%);
+}
+html {
+  scroll-behavior: smooth;
+}
+.project {
+  padding: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .project {
+    margin: 39px 56px;
+    width: 375px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 60px;
+  }
+}
+.project .screen {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .project .screen {
+    flex-basis: 100%;
+  }
+}
+.project .screen::before,
+.project .screen::after {
+  left: -302px;
+  position: absolute;
+  content: "";
+  width: 500px;
+  z-index: -1;
+}
+.project .screen::before {
+  height: 100%;
+  top: -200px;
+  background-color: hsl(293, 100%, 63%);
+}
+.project .screen::after {
+  height: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to top,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  top: 139px;
+}
+@media (max-width: 767px) {
+  .project .screen::before {
+    height: 58%;
+  }
+  .project .screen::after {
+    top: 18px;
+  }
+}
+.project .chat {
+  padding: 10px;
+  background-color: white;
+  border-radius: 21px;
+  width: 75%;
+  box-shadow: 6px 6px 20px #ddd;
+}
+@media (max-width: 767px) {
+  .project .chat {
+    flex-basis: 100%;
+  }
+}
+.project .chat .conversation > div {
+  font-size: 6px;
+  padding: 10px;
+  border-radius: 12px;
+}
+.project .chat .head {
+  padding: 35px 14px 17px;
+  display: flex;
+  border-radius: 21px 21px 0 0;
+  color: white;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  position: relative;
+}
+.project .chat .head::after {
+  position: absolute;
+  content: "";
+  width: 60%;
+  left: 50%;
+  border-radius: 21px;
+  height: 32px;
+  background-color: white;
+  transform: translateX(-50%);
+  top: -10px;
+}
+.project .chat .head i:first-child {
+  margin-right: 8px;
+}
+.project .chat .head .user-name {
+  display: flex;
+}
+.project .chat .head .user-name img {
+  margin-right: 7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.project .chat .head .user-name .name div:first-child {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.project .chat .head .user-name .name div:last-child {
+  font-size: 10px;
+  color: hsl(276, 100%, 81%);
+}
+.project .chat .head i:last-child {
+  margin-left: auto;
+}
+.project .conversation {
+  background-color: hsl(270, 20%, 96%);
+  border-radius: 0 0 21px 21px;
+  padding: 10px;
+}
+.project .one,
+.project .two,
+.project .five {
+  text-align: left;
+  background-color: hsl(276, 100%, 81%);
+  color: hsl(276, 55%, 52%);
+  width: 65%;
+  margin: 10px 0;
+}
+.project .conversation .three,
+.project .conversation .four {
+  text-align: right;
+  background-color: white;
+  color: hsl(271, 15%, 43%);
+  margin-left: auto;
+  margin-top: 10px;
+  margin-left: auto;
+}
+.three {
+  width: 65%;
+}
+.four {
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.project .conversation .dog-pics {
+  text-align: right;
+  margin-left: auto;
+  width: 75% !important;
+  margin-right: -13px;
+  margin-bottom: -13px;
+}
+.project .conversation .dog-pics img {
+  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  margin-right: 3px;
+}
+.project .conversation .six {
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  color: white;
+  width: 80%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project .conversation .six .time {
+  color: hsl(206, 6%, 79%);
+  position: relative;
+  margin-left: 23px;
+}
+.project .conversation .six .time::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid hsl(206, 6%, 79%);
+  border-radius: 50%;
+  left: -16px;
+  top: -1px;
+}
+.conversation .six .price {
+  font-size: 17px;
+  font-weight: 500;
+}
+.project .conversation .seven {
+  width: 100%;
+  border-radius: 38px !important;
+  background-color: white;
+  margin: 14px 0px 3px;
+  display: flex;
+  justify-content: space-between;
+}
+.project .conversation .seven input {
+  outline: none;
+  border: none;
+}
+.project .conversation .seven input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+.project .conversation .seven i {
+  font-size: 14px;
+  padding: 6px 9px;
+  background-color: hsl(271, 36%, 24%);
+  color: white;
+  border-radius: 50%;
+}
+.project .info {
+  flex: 1;
+  position: relative;
+}
+.project .info::before,
+.project .info::after {
+  right: -409px;
+  position: absolute;
+  content: "";
+  width: 500px;
+  z-index: -1;
+  background-color: hsl(270, 20%, 96%);
+}
+.project .info::before {
+  height: 270%;
+  bottom: -437px;
+}
+.project .info::after {
+  height: 500px;
+  border-radius: 50%;
+  top: -112px;
+}
+.project .info .title {
+  font-size: 40px;
+  color: hsl(271, 36%, 24%);
+  font-weight: 500;
+  margin: 0;
+}
+.project .info p {
+  width: 413px;
+  margin: 20px 0px;
+  color: hsl(270, 7%, 64%);
+  font-size: 15px;
+  line-height: 1.7;
+}
+@media (max-width: 767px) {
+  .project .info {
+    text-align: center;
+  }
+  .project .info::before,
+  .project .info::after {
+    width: 300px;
+    right: -181px;
+  }
+  .project .info::after {
+    top: -174px;
+    height: 300px;
+  }
+  .project .info::before {
+    bottom: -212px;
+  }.project .info p {
+    width: 298px;
+  }
+}
+a.name {
+  background: orange;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 22px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
